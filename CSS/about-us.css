@@ -1,0 +1,291 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--font-family-primary);
+  color: var(--text-primary-color);
+}
+
+:root {
+  --primary-margin: 50px 70px;
+  --bg-primary-color: #541975;
+  --bg-secondary-color: #b49051;
+  --text-primary-color: #2e3b42;
+  --text-secondary-color: #788085;
+  --font-family-primary: "Gowun Batang", serif;
+  --font-family-secondary: "Roboto", sans-serif;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  margin: var(--primary-margin);
+  position: absolute;
+}
+.header-left {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10.5px 30px;
+  background-color: white;
+  width: 78vw;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.logo h1 {
+  color: var(--bg-primary-color);
+  font-size: 47px;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+.logo h4 {
+  font-weight: 200;
+  color: #cebcd8;
+  width: 50%;
+  font-family: var(--font-family-secondary);
+  font-size: 15px;
+}
+.header-left nav {
+  display: flex;
+  gap: 25px;
+}
+.header-left nav a,
+.header-right a {
+  text-decoration: none;
+  color: black;
+  font-size: 13px;
+  letter-spacing: 2px;
+  font-family: var(--font-family-secondary);
+}
+.header-left nav a {
+  position: relative;
+}
+.header-left nav a:nth-child(3)::before {
+  opacity: 1;
+  bottom: -10px;
+}
+.header-left nav a:nth-child(3):hover::before {
+  transform: translateY(0);
+}
+.header-left nav a::before {
+  content: "";
+  height: 1.5px;
+  width: 100%;
+  background-color: var(--bg-secondary-color);
+  position: absolute;
+  bottom: -20px;
+  opacity: 0;
+  transition: all 500ms;
+}
+.header-left nav a:hover::before {
+  transform: translateY(-10px);
+  opacity: 1;
+}
+.header-right {
+  background-color: var(--bg-secondary-color);
+  padding: 28px 30px;
+}
+.header-right a:hover {
+  opacity: 0.7;
+  transition: all 300ms;
+}
+.about-us-section {
+  background-color: var(--bg-primary-color);
+  padding: 180px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+.about-us-section h1 {
+  color: white;
+  letter-spacing: 3px;
+  font-weight: 400;
+  font-size: 38px;
+  margin-top: 70px;
+}
+.about-us-section h1::before {
+  content: "";
+  height: 200px;
+  width: 1.5px;
+  background-color: var(--bg-secondary-color);
+  position: absolute;
+  bottom: 210px;
+  left: 50%;
+}
+.info,
+.history-section {
+  display: flex;
+  gap: 150px;
+  padding: 90px 170px;
+}
+.info h1,
+.history-section h1 {
+  width: 85%;
+  font-weight: 400;
+  font-size: 25px;
+}
+.info .wrapper,
+.history-section .wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.info .wrapper p,
+.history-section .wrapper p {
+  font-size: 18px;
+}
+.values-section {
+  position: relative;
+  padding: 70px 0;
+}
+.values-section::before,
+.values-section::after {
+  content: "";
+  height: 1px;
+  width: 100%;
+  background-color: #e2e2e2;
+  position: absolute;
+}
+.values-section::before {
+  top: 0;
+}
+.values-section::after {
+  bottom: 0;
+}
+.values-section h1 {
+  text-align: center;
+}
+.values-section .values {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 50px;
+}
+.values-section .values .value {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 27px;
+}
+.values-section .values .value img {
+  height: 80px;
+  width: 80px;
+}
+.values-section .values .value h3 {
+  text-align: center;
+  font-weight: 400;
+}
+.values-section .values .value p {
+  width: 320px;
+  text-align: center;
+  font-family: var(--font-family-secondary);
+}
+.progress-section {
+  padding-top: 80px;
+  margin-bottom: 90px;
+  position: relative;
+}
+.progress-section::before {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: #e1e1e1;
+  position: absolute;
+  top: 0;
+}
+.progress-section .title {
+  text-align: center;
+}
+.progress-section .title i {
+  color: var(--bg-secondary-color);
+  font-size: 27px;
+}
+.progress-section .title h2 {
+  font-weight: 400;
+  margin-top: 10px;
+  font-size: 25px;
+  letter-spacing: 1.5px;
+}
+.progress-section .content {
+  display: flex;
+  justify-content: space-around;
+  margin: 40px 0;
+}
+.progress-section .content .numbers {
+  text-align: center;
+}
+.progress-section .content .numbers h1 {
+  font-size: 80px;
+  font-weight: 200;
+  color: var(--bg-secondary-color);
+}
+.progress-section .content .numbers h3 {
+  font-weight: 400;
+  font-size: 20px;
+}
+footer {
+  background-color: var(--bg-primary-color);
+  padding: 75px 200px;
+}
+footer .footer-top {
+  display: flex;
+  justify-content: space-between;
+}
+footer .footer-top .logo h1 {
+  color: white;
+}
+footer .phone {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+footer .phone h3 {
+  color: white;
+  font-weight: 400;
+  font-size: 19px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+footer .phone h3 i {
+  color: white;
+  font-size: 14px;
+}
+footer .phone h4 {
+  color: white;
+  font-weight: 400;
+  font-size: 14px;
+  font-family: var(--font-family-secondary);
+  margin-top: 13px;
+}
+footer .footer-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  margin-top: 50px;
+  text-align: center;
+}
+footer .footer-bottom nav {
+  display: flex;
+  gap: 30px;
+}
+footer .footer-bottom nav a {
+  text-decoration: none;
+  color: white;
+  transition: all 300ms;
+  font-size: 14px;
+
+  font-family: var(--font-family-secondary);
+}
+footer .footer-bottom nav a:hover {
+  color: var(--bg-secondary-color);
+}
+footer .footer-bottom p {
+  color: white;
+  font-size: 12px;
+  font-family: var(--font-family-secondary);
+}

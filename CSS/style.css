@@ -1,0 +1,331 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--font-family-primary);
+  color: var(--text-primary-color);
+}
+
+:root {
+  --primary-margin: 50px 70px;
+  --bg-primary-color: #541975;
+  --bg-secondary-color: #b49051;
+  --text-primary-color: #2e3b42;
+  --text-secondary-color: #788085;
+  --font-family-primary: "Gowun Batang", serif;
+  --font-family-secondary: "Roboto", sans-serif;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  margin: var(--primary-margin);
+}
+.header-left {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10.5px 30px;
+  background-color: var(--bg-primary-color);
+  width: 87%;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.logo h1 {
+  color: white;
+  font-size: 47px;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+.logo h4 {
+  font-weight: 200;
+  color: #cebcd8;
+  width: 50%;
+  font-family: var(--font-family-secondary);
+  font-size: 15px;
+}
+.header-left nav {
+  display: flex;
+  gap: 25px;
+}
+.header-left nav a,
+.header-right a {
+  text-decoration: none;
+  color: white;
+  font-size: 13px;
+  letter-spacing: 2px;
+  font-family: var(--font-family-secondary);
+}
+.header-left nav a {
+  position: relative;
+}
+.header-left nav a::before {
+  content: "";
+  height: 1.5px;
+  width: 100%;
+  background-color: var(--bg-secondary-color);
+  position: absolute;
+  bottom: -20px;
+  opacity: 0;
+  transition: all 500ms;
+}
+.header-left nav a:hover::before {
+  transform: translateY(-10px);
+  opacity: 1;
+}
+.header-right {
+  background-color: var(--bg-secondary-color);
+  padding: 28px 30px;
+}
+.header-right a:hover {
+  opacity: 0.7;
+  transition: all 300ms;
+}
+
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 60px 200px;
+}
+.hero-section .info {
+  width: 35%;
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  gap: 20px;
+}
+.hero-section .info h1 {
+  font-size: 47px;
+  font-weight: 200;
+}
+.hero-section .info p {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 30px;
+  font-family: var(--font-family-secondary);
+  color: var(--text-secondary-color);
+}
+.hero-section .info button {
+  padding: 14px 22px;
+  color: var(--bg-secondary-color);
+  outline: 0;
+  border: 2px solid var(--bg-secondary-color);
+  background-color: transparent;
+  font-family: var(--font-family-secondary);
+  transition: all 400ms;
+  margin-top: 7px;
+}
+.hero-section .info button:hover {
+  background-color: var(--bg-secondary-color);
+  color: white;
+}
+.hero-section img {
+  width: 53%;
+}
+
+.intro-section {
+  margin: 100px 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.intro-section p {
+  text-align: center;
+  font-size: 20px;
+  width: 45%;
+  line-height: 27px;
+}
+
+.client-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  margin-top: 70px;
+  padding: 100px 0;
+  background-color: #f1f1f1;
+}
+.client-section h4 {
+  font-family: var(--font-family-secondary);
+  font-weight: 400;
+  color: var(--bg-secondary-color);
+}
+.client-section h2 {
+  font-size: 27px;
+  font-weight: 400;
+}
+.client-section h3 {
+  font-size: 21px;
+  font-weight: 400;
+  width: 45%;
+  text-align: center;
+  color: var(--text-secondary-color);
+}
+.client-section .pages {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+.client-section .pages .page {
+  padding: 13px 19px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  font-size: 18px;
+  transition: all 300ms;
+}
+.client-section .pages .page:hover {
+  background-color: var(--bg-secondary-color);
+  color: white;
+}
+
+.progress-section {
+  margin: 70px 0;
+}
+.progress-section .title {
+  text-align: center;
+}
+.progress-section .title i {
+  color: var(--bg-secondary-color);
+  font-size: 27px;
+}
+.progress-section .title h2 {
+  font-weight: 400;
+  margin-top: 10px;
+  font-size: 25px;
+  letter-spacing: 1.5px;
+}
+.progress-section .content {
+  display: flex;
+  justify-content: space-around;
+  margin: 40px 0;
+}
+.progress-section .content .numbers {
+  text-align: center;
+}
+.progress-section .content .numbers h1 {
+  font-size: 80px;
+  font-weight: 200;
+  color: var(--bg-secondary-color);
+}
+.progress-section .content .numbers h3 {
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.contact-us-section {
+  display: flex;
+  align-items: center;
+  margin: 90px 200px;
+  background-color: var(--bg-secondary-color);
+}
+.contact-us-section .contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  text-align: center;
+}
+.contact-us-section .contact-info i {
+  color: white;
+  font-size: 20px;
+}
+.contact-us-section .contact-info h4 {
+  font-family: var(--font-family-secondary);
+  color: white;
+  font-weight: 400;
+}
+.contact-us-section .contact-info h2 {
+  width: 70%;
+  font-weight: 400;
+  color: white;
+}
+.contact-us-section .contact-info .contact-number {
+  color: white;
+  transition: all 300ms;
+}
+.contact-us-section .contact-info .contact-number:hover {
+  color: #541975;
+}
+.contact-us-section .contact-info button {
+  background-color: transparent;
+  color: white;
+  outline: 0;
+  border: 2px solid white;
+  padding: 14px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  font-family: var(--font-family-secondary);
+  transition: all 300ms;
+}
+.contact-us-section .contact-info button:hover {
+  opacity: 0.7;
+}
+.contact-us-section img {
+  width: 50%;
+  height: fit-content;
+}
+
+footer {
+  background-color: var(--bg-primary-color);
+  padding: 75px 200px;
+}
+footer .footer-top {
+  display: flex;
+  justify-content: space-between;
+}
+footer .phone {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+footer .phone h3 {
+  color: white;
+  font-weight: 400;
+  font-size: 19px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+footer .phone h3 i {
+  color: white;
+  font-size: 14px;
+}
+footer .phone h4 {
+  color: white;
+  font-weight: 400;
+  font-size: 14px;
+  font-family: var(--font-family-secondary);
+  margin-top: 13px;
+}
+footer .footer-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  margin-top: 50px;
+  text-align: center;
+}
+footer .footer-bottom nav {
+  display: flex;
+  gap: 30px;
+}
+footer .footer-bottom nav a {
+  text-decoration: none;
+  color: white;
+  transition: all 300ms;
+  font-size: 14px;
+
+  font-family: var(--font-family-secondary);
+}
+footer .footer-bottom nav a:hover {
+  color: var(--bg-secondary-color);
+}
+footer .footer-bottom p {
+  color: white;
+  font-size: 12px;
+  font-family: var(--font-family-secondary);
+}
